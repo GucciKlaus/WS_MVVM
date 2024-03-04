@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,7 @@ namespace WS_MVVM
     {
         public PatientViewModel()
         {
-            Patients = new List<Patient>();
+            Patients = new ObservableCollection<Patient>();
             Init();
         }
 
@@ -24,9 +25,9 @@ namespace WS_MVVM
             return this;
         }
 
-		private List<Patient> patients;
+		private ObservableCollection<Patient> patients;
 
-		public List<Patient> Patients
+		public ObservableCollection<Patient> Patients
 		{
 			get { return patients; }
             set { patients = value;

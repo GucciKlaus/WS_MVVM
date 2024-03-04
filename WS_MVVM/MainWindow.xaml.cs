@@ -26,5 +26,10 @@ namespace WS_MVVM
             /*Context anlegen und dann mitgeben*/
             this.DataContext = new PatientViewModel();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            (this.DataContext as PatientViewModel).Patients.Add(new Patient { Firstname = "Sepp", Lastname = "neu" });
+        }
     }
 }
